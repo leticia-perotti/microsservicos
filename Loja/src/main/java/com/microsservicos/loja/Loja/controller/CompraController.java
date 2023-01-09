@@ -1,6 +1,7 @@
 package com.microsservicos.loja.Loja.controller;
 
 import com.microsservicos.loja.Loja.dto.CompraDTO;
+import com.microsservicos.loja.Loja.model.Compra;
 import com.microsservicos.loja.Loja.service.CompraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +17,7 @@ public class CompraController {
     private CompraService compraService;
 
     @RequestMapping(method = RequestMethod.POST)
-    public void realizaCompra(
+    public Compra realizaCompra(
             @RequestBody CompraDTO compra
     ){
         compraService.realizaCompra(compra);
