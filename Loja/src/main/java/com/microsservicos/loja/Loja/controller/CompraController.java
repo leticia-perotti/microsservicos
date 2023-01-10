@@ -20,6 +20,6 @@ public class CompraController {
     public Compra realizaCompra(
             @RequestBody CompraDTO compra
     ){
-        compraService.realizaCompra(compra);
+        return compraService.realizaCompra(compra);
     }
 }
