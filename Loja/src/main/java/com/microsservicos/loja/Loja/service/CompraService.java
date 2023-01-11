@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 public class CompraService {
 
     private static final Logger LOG = LoggerFactory.getLogger(CompraService.class);
-    @Autowired
+    @Autowired(required=true)
     private FornecedorClient fornecedorClient;
 
     public Compra realizaCompra(CompraDTO compra) {
